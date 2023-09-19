@@ -176,10 +176,9 @@ $(document).ready(function() {
 충돌을 최소화 시키는 자신을 보고 그래도 좋은 경험이 되었다는 것을 느꼈습니다. 또한 그런 저를 괜찮다 괜찮다 해준 팀원들에게 너무 고맙고 나도 팀원들을 먼저 생각하는 개발자가 되고 싶다는 생각이 들었습니다.
 
 ## 프로젝트 결과
+![image](https://github.com/BeomV/Somoim-Project/assets/101873654/6cf7f9af-0e91-45cb-a2cc-e57f8ae30d8e)
 
-
-
-
+[(최우수상_상장)멀티캠퍼스 백엔드 개발자 취업캠프(Java) 11회차.pdf](https://github.com/BeomV/Somoim-Project/files/12664275/_.Java.11.pdf)
 
 
 
