@@ -1,0 +1,92 @@
+.payment_section {
+    width: 100%;
+    margin: 50px auto;
+}
+
+.payment_section .payment_main_grid li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.payment_left {
+    width: 20%;
+    border: #ccc 1px  solid;
+    border-radius: 5px 0px 0px 5px;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment_left span{
+    width: 100%;
+}
+
+.payment_right {
+    width: 50%;
+    border: #ccc 1px  solid;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.payment_left, .payment_right {
+    padding: 20px;
+    text-align: left;
+}
+
+.payment_right{
+    padding-right: 30px;
+
+}
+
+.payment_left p {
+    margin-top: 20px;
+}
+
+.payment_right ul {
+    display: grid;
+    width: 100%;
+    overflow: auto;
+    height: inherit;
+    grid-template-columns: repeat(9,1fr);
+}
+
+.payment_right ul li {
+    display: flex;
+    width: 50px;
+    margin: 20px 0px 0px 20px;
+    border-radius: 25px;
+    background-color: #ccc;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.payment_right ul li i {
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.show-more-div{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.show-more-div a{
+    font-size: 12px;
+}
+
+#payment_btn {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 5px 0px;
+}

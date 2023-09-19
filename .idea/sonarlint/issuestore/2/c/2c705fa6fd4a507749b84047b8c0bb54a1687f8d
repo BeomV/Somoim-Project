@@ -1,0 +1,7 @@
+
+g	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ž¡Ü
+p	java:S116"VRename this field "event_wdate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ï’•üÿÿÿÿ
+i	java:S116"TRename this field "save_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÐøÃ
+k	java:S116"WRename this field "start_events" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼³¹
+m	java:S116"SRename this field "end_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½¸Ç¢ÿÿÿÿÿ
+l	java:S116"WRename this field "event_target" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÙØ•

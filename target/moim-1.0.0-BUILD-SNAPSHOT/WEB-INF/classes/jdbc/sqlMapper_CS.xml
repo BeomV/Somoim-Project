@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.moim.cs">
+	<select id="CS_SELECT_ALL"
+		resultType="test.com.moim.cs.model.CsVO">
+		select * from notice order by num desc
+	</select>
+
+
+	<insert id="CS_INSERT">
+		insert into notice (num, user_id, title, content, save_name)
+	values (seq_notice.nextval, #{user_id, jdbcType=VARCHAR}, #{title, jdbcType=VARCHAR}, #{content, jdbcType=VARCHAR},#{save_name})
+	</insert>
+	
+		<select id="BUG_SELECT_ALL"
+		resultType="test.com.moim.cs.model.BugVO">
+		select * from CS_BUG
+	</select>
+
+
+	<insert id="BUG_INSERT">
+		insert into CS_BUG (num, user_id, title, content) 
+	values (seq_notice.nextval, #{user_id, jdbcType=VARCHAR}, #{title, jdbcType=VARCHAR}, #{content, jdbcType=VARCHAR})
+	</insert>
+	
+
+ 	<select id="CS_SELECT_ONE"
+			resultType="test.com.moim.cs.model.CsVO">
+ 			select * from notice where num = #{num}
+ 	</select>
+
+
+	<update id="CS_UPDATE">
+		update notice set title=#{title},content=#{content}, save_name=#{save_name}
+		where num=#{num}
+	</update>
+
+	<delete id="CS_DELETE">
+		delete from notice where num=#{num}
+	</delete>
+
+	<select id="CS_TOTAL_SEARCHING"
+			resultType="test.com.moim.cs.model.CsVO">
+		select * from notice where title like '%' || #{searchKey} || '%'
+								OR content like '%' || #{searchKey} || '%'
+	</select>
+
+	<!--
+	<select id="b_SELECT_ONE"
+		resultType="test.com.semi.board.model.BoardVO">
+		select * from board where wnum = #{wnum}
+	</select>
+
+	<select id="b_ID_CHECK"
+		resultType="test.com.semi.board.model.BoardVO">
+		select * from board where id = #{id}
+	</select>
+
+	<select id="b_LOGIN"
+		resultType="test.com.semi.board.model.BoardVO">
+		select * from board where id = #{id} and pw = #{pw}
+	</select>
+
+	<select id="b_SEARCH_LIST_NAME"
+		resultType="test.com.semi.board.model.BoardVO">
+		select * from board where name like #{searchWord}
+	</select>
+
+	<select id="b_SEARCH_LIST_TEL"
+		resultType="test.com.semi.board.model.BoardVO">
+		select * from board where tel like #{searchWord}
+	</select>
+
+	<insert id="b_INSERT">
+		insert into board(wnum,title,writer,content,wdate)
+		values(seq_board.nextval,#{title},#{writer},#{content},sysdate)
+	</insert>
+
+	<update id="b_UPDATE">
+		update board set title=#{title},writer=#{writer},content=#{content}
+		where wnum=#{wnum}
+	</update>
+
+	<delete id="b_DELETE">
+		delete from board where wnum=#{wnum}
+	</delete>
+	-->
+
+</mapper>

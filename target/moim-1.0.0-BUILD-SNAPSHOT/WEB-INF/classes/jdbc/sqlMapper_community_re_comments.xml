@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.moim.community_comments">
+	<select id="COMMUNITY_RE_C_SELECT_ALL"
+		resultType="test.com.moim.community_comments.model.Community_re_commentsVO">
+		select * from community_comments where board_num = #{board_num}
+	</select>
+
+	<insert id="COMMUNITY_RE_C_INSERT"
+			parameterType="test.com.moim.community_comments.model.Community_re_commentsVO">
+		insert into community_comments(num,board_num,content,user_id, parent_com)
+		values(seq_community_comments.nextval,#{board_num},#{content},#{user_id}, #{parent_com})
+	</insert>
+
+	<update id="COMMUNITY_RE_C_UPDATE"
+			parameterType="test.com.moim.community_comments.model.Community_re_commentsVO">
+		update community_comments set content=#{content}
+		where num = #{num}
+	</update>
+
+	<delete id="COMMUNITY_RE_C_DELETE"
+			parameterType="test.com.moim.community_comments.model.Community_re_commentsVO">
+		delete from community_comments where num = #{num}
+	</delete>
+</mapper>

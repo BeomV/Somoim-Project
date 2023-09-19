@@ -1,0 +1,140 @@
+.CS_FAQ_selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    
+  }
+  
+  .CS_FAQ_selection ul {
+  
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .CS_FAQ_selection li {
+  
+    color: black;
+    margin: 10px;
+    flex: 1;
+    margin-right: 100px;
+    width: 150px;
+  }
+  
+  .CS_FAQ_selection a {
+    text-decoration: none;
+  }
+
+  .CS_FAQ_selection li:hover {
+    color: blue;
+  }
+
+
+  .CS_FAQ_List {
+    margin-top: 30px;
+    background-color: white;
+    margin-bottom: 25px;
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid white;
+  }
+  
+  
+  .CS_FAQ_List ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px; 
+    border:1px solid white;
+    width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  
+  .CS_FAQ_List li {
+    width: 60%; 
+    text-align: left;
+  }
+  
+  .CS_FAQ_List_board {
+  background-color: white;
+  padding: 0;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.CS_FAQ_List_board ul {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0;
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.CS_FAQ_List_board li {
+   margin-top: 5px;
+  }
+
+
+.CS_FAQ_List_board .CS_board_profile_info {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border-color: lightgray;
+}
+.imgQA{
+    height:50% ;
+}
+.CS_FAQ_List_board .CS_board_profile_info .cs_info_item1 {
+    background-color: white;
+    width: auto; 
+    height:50% ;
+    flex: 0 0 auto; 
+  }
+  
+.CS_FAQ_List_board .CS_board_profile_info .cs_info_item2 {
+    width: 100%;
+    height:50px ;
+    margin-bottom: 40px;
+    margin-top: 10px;
+
+    background-color: white;
+  }
+
+
+  
+  
+  .cs_img {
+    flex-shrink: 0; 
+    margin-right: 10px; 
+    background-color: white;
+    margin-bottom: 50px;
+  }
+  
+  .cs_circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 5% 5% 0 5%;
+  }
+  
+  .cs_circle img {
+    max-width: 80%;
+    max-height: 80%;
+  }

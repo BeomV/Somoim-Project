@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="test.com.moim.member">
+	<select id="MEMBER_SELECT_ALL" resultType="test.com.moim.member.model.MemberVO">
+		select * from somoim_member order by num desc
+	</select>
+
+	<select id="MEMBER_CHECK" resultType="test.com.moim.member.model.MemberVO">
+		select * from somoim_member where user_id=#{user_id} and somoim_num=#{num}
+	</select>
+
+	<update id="MYPAGE_UPDATE_MEMBER">
+		update somoim_member set save_name=#{save_name} where user_id=#{user_id}
+	</update>
+
+	<select id="PROFILE_CHECK" resultType="test.com.moim.member.model.MemberVO">
+		select * from somoim_member where somoim_num=#{num}
+	</select>
+	
+	<select id="SOMOIM_CHECK" resultType="test.com.moim.member.model.MemberVO">
+		select somoim_num from somoim_member where user_id=#{user_id}
+	</select>
+	
+	<select id="MEMBER_SEARCH_LIST_USERID" resultType="test.com.moim.member.model.MemberVO">
+		select * from somoim_member where user_id like #{searchWord}
+	</select>	
+	
+	<select id="MEMBER_SEARCH_LIST_SOMTITLE" resultType="test.com.moim.member.model.MemberVO">
+		select * from somoim_member where som_title like #{searchWord}
+	</select>
+	
+	<select id="SEARCH_SAVE_NAME" resultType="test.com.moim.member.model.MemberVO">
+		select save_name from somoim_member where user_id=#{somoim_master}
+	</select>
+	
+	<select id="SOM_MAXMEMBER_CHECK" resultType="int">
+		select count(*) from somoim_member where som_title=#{som_title}
+	</select>
+	
+	<insert id="MEMBER_INSERT" parameterType="test.com.moim.member.model.MemberVO">
+		insert into somoim_member (num,user_id,som_title,save_name, somoim_num) 
+		values(seq_somoim_member.nextval,#{user_id},#{som_title},#{save_name},#{num})
+	</insert>
+	
+
+<delete id="MEMBER_DELETE">
+delete from somoim_member where som_title=#{som_title, jdbcType=VARCHAR} and user_id=#{user_id} </delete>
+</mapper>

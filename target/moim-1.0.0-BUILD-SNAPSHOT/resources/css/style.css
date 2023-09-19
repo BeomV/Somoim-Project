@@ -1,0 +1,597 @@
+*{
+    margin: 0;
+    color: #3c3c3c;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 767px) {
+    /* 스타일 작성 */
+body {
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 131px; /* footer의 높이만큼의 여백을 추가해야합니다. 예를 들어 footer의 높이가 80px라면 이 값으로 설정 */
+        box-sizing: border-box;
+}
+  
+
+.gnb{
+    display: flex;
+    width: 1440PX;
+    margin: 0 auto;
+    padding: 10px 0px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececec;
+}
+
+.logo img{
+    width: 120px;
+
+}
+
+.img_banner{
+    width: 1440px;
+    margin: 0 auto;
+    background-color: white;
+    height: 400px;
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.0);
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: white;
+    margin: 20px auto;
+}
+
+.img_banner img{
+    width: 100%;
+    background-size: cover;
+}
+
+nav{
+    width: 600px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 50px;
+
+    
+}
+
+nav > ul > li{
+    width: 100px;
+    float: left;
+    
+}
+
+.main_search{
+    width: 500px;
+    margin-top: 10px;
+
+}
+
+.main_search > input{
+    width: 300px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #dadada;
+}
+
+.login{
+    margin-top: 10px;
+}
+
+.login > a{
+    font-size: 12px;
+    color: #888888;
+}
+
+
+/*Body*/
+.main_container{
+    width: 100%;
+}
+
+
+.main_pictogram{
+    width: 1440px;
+    margin: 0 auto;
+    height: 180px;
+    text-align: center;
+
+}
+
+.main_pictogram ul{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.main_pictogram ul li{
+    display: inline-block;
+    display: flex;
+    width: 100px;
+    margin: 0px 20px;
+    border-radius: 15px;
+    background-color: #ececec;
+    height: 100px;
+    justify-content: center;
+     align-items: center;
+    
+
+}
+.main_pictogram ul li i{
+    font-size: 36px;
+    
+}
+
+.main_pictogram ul li i:hover{
+    color: #81a9ff;
+    
+}
+
+
+
+.main_section04{
+    width: 1440px;
+    margin: 0 auto;
+    background-color: #81a9ff;
+    height: 400px;
+    text-align: center;
+}
+.main_section05{
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    height: auto;
+    background-color: white;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_section05 img{
+    width: 50%;
+}
+
+
+
+.footer {
+        width: 1440px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        height: 80px; /* footer의 높이를 지정합니다 */
+}
+
+
+
+/*메인페이지 모임 리스트 1번*/
+
+.moim_list01{
+    width: 1440px;
+    margin: 0 auto;
+    background-color: rgb(248, 248, 248);
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.moim_list01 strong{
+    font-size: 36px;
+    
+
+}
+
+.moim_list01 ul{
+    width: 1440px;
+    padding-top: 100px;
+    text-align: center;
+    
+}
+
+.moim_list01 ul li{
+    display: inline-block;
+
+    width: 550px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateZ(0);
+
+}
+
+.moimst_list_01_img_box{
+    width: 200px;
+    border-radius: 10px;
+    background-color: white;
+    justify-content: center;
+    float: left;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.moim_list01 ul div:last-child{
+    width: 330px;
+    text-align: left;
+    float: left;
+    height: 200px;
+    margin-left: 15px;
+    overflow: hidden;
+
+}
+
+.moim_list01 .hashtag {
+    width: 80px;
+    border-radius: 10px;
+    background-color: #d1d1d1;
+    text-align: center;
+}
+
+
+.main_selectList h1{
+    width: 90%;
+    font-size: 18px;
+    padding-top: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.moim_list01 .sub_tit{
+    font-size: 12px;
+    color: #666;
+}
+
+    .moimst_list_02_img_box {
+        width: 200px;
+        border-radius: 10px;
+        background-color: white;
+        justify-content: center;
+        float: left;
+        height: 200px;
+        display: flex;
+        align-items: center;
+    }
+
+.moimst_list_01_img_box img{
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    
+    background-size: cover;
+    border-radius: 15px;
+
+}
+
+
+/*모임 리스트 2번*/
+.moim_list02{
+    width: 1440px;
+    margin: 0 auto;
+    background-color: rgba(244, 247, 253, 0.45);
+    height: 850px;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.moim_list02 strong{
+    font-size: 36px;
+    
+
+}
+
+.moim_list02 ul{
+    width: 1440px;
+    padding-top: 100px;
+    text-align: center;
+    
+}
+
+.moim_list02 ul li{
+    display: inline-block;
+
+    width: 550px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateZ(0);
+
+}
+
+.moim_list02 ul div:first-child{
+    width: 200px;
+    border-radius: 10px;
+    background-color: white;
+    
+    float: left;
+    height: 200px;
+
+}
+
+.moim_list02 ul div:last-child{
+    width: 330px;
+    text-align: left;
+    float: left;
+    height: 200px;
+    margin-left: 15px;
+    overflow: hidden;
+
+}
+
+.moim_list02 .hashtag {
+    width: 80px;
+    border-radius: 10px;
+    background-color: #d1d1d1;
+    text-align: center;
+}
+
+
+.main_selectList h1{
+    font-size: 18px;
+    padding-top: 30px;
+
+}
+
+.moim_list02 .sub_tit{
+    font-size: 12px;
+    color: #666;
+}
+
+.moim_list02 ul div:first-child img{
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#more_info{
+    width: 160px;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 50px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateZ(0);
+}
+    #more_info_comu{
+        width: 160px;
+        padding: 15px 0px;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        margin-top: 50px;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateZ(0);
+    }
+
+/*Footer 부분*/
+
+.footer{
+    display: flex;
+    padding: 20px 0px 30px 0px;
+    border-top: #ccc solid 1px;
+    justify-content: space-between;
+}
+
+.footer li{
+    color: #888888;
+    font-weight: 600;
+}
+
+.footer strong{
+    font-size: 16px;
+}
+
+.footer > div >ul >li{
+    padding: 7px 0px;
+}
+
+.footer_company ul li{
+    font-size: 12px;
+    
+}
+
+}
+
+
+/* login.html 로그인 영역*/
+
+.login_section{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center; /* 수평 정렐 */
+    align-items: center; /* 수직 정렬 */
+    height: 700px;
+    
+    
+
+}
+
+form{
+    font-weight: 500;
+    text-align: left;
+}
+
+.sub_login{
+    display: flex;
+    margin: 10px 0px;
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: space-between;
+    
+}
+
+.sub_login label{
+    color: rgb(167, 167, 167);
+}
+
+.sub_login span a{
+    color: rgb(167, 167, 167);
+    padding-left: 10px;
+}
+
+.login_section #user_id, .login_section #user_pw{
+    width: 400px;
+    margin: 5px 0px;
+    padding: 5px 10px;
+    border: solid 1px #d6d6d6;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login_section #user_id:hover, .login_section #user_pw:hover{
+    border: rgb(23, 133, 242) 1px solid;
+}
+
+.login_section #user_id{
+    margin-bottom: 20px;
+}
+
+.login_section #login_btn{
+    width: 422px;
+    padding: 5px 0px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    background-color: #1785F2;
+    margin-top: 20px;
+}
+
+.login_section #auto_login{
+    margin-right: 10px;
+    
+}
+
+/*register.html 회원가입 영역*/
+
+.register_section{
+    padding: 100px 0px;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    height: 850px;
+    text-align: center;
+    justify-content: center; /* 수평 정렐 */
+    align-items: center; /* 수직 정렬 */
+
+}
+
+.register_section form{
+    width: inherit;
+
+}
+.birth_gender{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.register_section input{
+    padding: 5px 0px;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0px;
+    border: solid 1px #d6d6d6;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+.register_section #user_email,
+.register_section #email_token{
+    width: 75%;
+}
+
+.register_section button{
+    width: 20%;
+    padding: 5px 0px;
+    border: solid 1px #d6d6d6;
+    border-radius: 5px;
+    background-color: white;
+    outline: none;
+}
+
+.birth_gender select{
+    width: 100px;
+    margin: 5px 0px;
+    padding: 3px 10px;
+    border: solid 1px #d6d6d6;
+    border-radius: 5px;
+    
+}
+
+#register{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding: 5px;
+    color: white;
+    background-color: #1785F2;
+    text-align: center;
+    margin-top: 50px;
+}
+.register_input_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

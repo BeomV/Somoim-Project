@@ -1,0 +1,185 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #3c3c3c;
+}
+
+input{
+    margin: 20px 0px 20px 10px;
+    padding: 10px;
+    border: #ccc solid 1px;
+    border-radius: 5px;
+    outline: none;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5rem;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+h3 {
+    display: block;
+    font-size: 1.3rem;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+}
+
+
+.find_sec{
+    background-color: white;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    padding: 50px;
+}
+
+
+.find_sec span {
+    text-align: left;
+}
+
+
+
+.find_sec button {
+    width: 56%;
+    margin-left: 10px;
+    padding: 4px;
+    border: none;
+    background-color: #1785F2;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.find_title{
+    background-color: white; 
+    text-align:  left;
+    height: 4%;
+}
+
+
+.insert_sec{
+    background-color: white; 
+    width: 100%;
+    
+}
+
+.total{ 
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    
+}
+
+
+#find_password{
+    width: 50%;
+}
+.email{
+    text-align: center;
+    background-color:white;
+    width: 100%;
+}
+.email  h3{
+    display: inline;
+    width: 100%;
+}
+.email h5{
+    display: inline; font-size: 0.7em;
+}
+
+.inser_email {
+    background-color: white;
+    width: 100%;
+    text-align: center; 
+    padding-right: 10%; 
+}
+
+.inser_email input {
+    width: 40%;
+    margin-left: 20%;
+    margin-right: 0; 
+}
+
+.inser_email button {
+    width: 18%;
+    background-color: gray;
+    margin-left: 2%; 
+}
+
+.insert_certi{
+    text-align: center;
+}
+.insert_certi input {
+    width: 40%;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.injarea {
+    background-color: white;
+    width: 30%;
+    text-align: right;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+#inj{
+    width: 200px; 
+    background-color: transparent; 
+    height: 10px; 
+    color: gray; padding-bottom: 20px;
+    font-size:  0.6rem; ;
+}
+#submitpass {
+    display: block;
+    margin: 20px auto 0; 
+    width: 150px;
+}
+.emailtitle{
+    background-color: white; text-align: left; margin-left: 23%;
+}
+
+
+
+
+.test1 {
+    background-color: white;
+    text-align: center; 
+}
+
+.img_certi {
+    background-color: white;
+    width: 450px;
+    height: 200px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.test1 button {
+    width: 5%;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.test1 input {
+    margin-left: auto; 
+    margin-right: auto; 
+    height: 10%;
+    width: 20%;
+}

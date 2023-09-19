@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.com.moim.userinfo">
+
+	<select id="U_SELECT_ALL"
+		resultType="test.com.moim.userinfo.model.UserinfoVO">
+		select * from userinfo order by num desc
+	</select>
+	<select id="U_SELECT_ONE"
+		resultType="test.com.moim.userinfo.model.UserinfoVO">
+		select * from userinfo where num = #{num}
+	</select>
+	<insert id="U_INSERT"
+		parameterType="test.com.moim.userinfo.model.UserinfoVO">
+		insert into userinfo(num,user_id,pw,name,email,save_name,point,birthday)
+		values(seq_userinfo.nextval,#{user_id},#{pw},#{name},#{email},#{save_name},#{point},#{birthday})
+	</insert>
+	
+		<insert id="userhome"
+		parameterType="test.com.moim.userinfo.model.UserinfoVO">
+		insert into userinfo(num,user_id,pw,name,email,save_name,point,birthday)
+		values(seq_userinfo.nextval,#{user_id},#{pw},#{name},#{email},#{save_name},#{point},#{birthday})
+	</insert>
+	
+	
+	
+	<select id="LOGIN"
+		resultType="test.com.moim.userinfo.model.UserinfoVO">
+		select * from userinfo where user_id = #{user_id} and pw = #{pw}
+	</select>
+	
+	
+	<select id="U_FindId"
+		resultType="test.com.moim.userinfo.model.UserinfoVO" parameterType="HashMap">
+		select * from userinfo where email=#{email,jdbcType=VARCHAR }
+	</select>
+
+	<select id="U_ID_CHECK"
+		resultType="test.com.moim.userinfo.model.UserinfoVO" >
+		select * from userinfo where user_id=#{user_id} 
+	</select>
+
+
+
+	<select id="U_FindPassword2"
+		resultType="test.com.moim.userinfo.model.UserinfoVO" parameterType="HashMap">
+		select * from userinfo where email=#{email,jdbcType=VARCHAR }
+	</select>
+	
+	<update id="U_resetPassword" >
+		update userinfo set pw=#{pw, jdbcType=INTEGER} where user_id=#{user_id,jdbcType=VARCHAR}
+	</update>
+	<update id="U_resetPassword_update" >
+		update userinfo set pw=#{pw, jdbcType=INTEGER} where user_id=#{user_id,jdbcType=VARCHAR}
+	</update>
+	
+
+    <update id="UPDATE_USER">
+        update userinfo set som_title=concat(som_title, #{som_title}) where user_id=#{user_id}
+    </update>
+    <update id="MYPAGE_UPDATE_OK" parameterType="test.com.moim.userinfo.model.UserinfoVO">
+        update userinfo set name=#{name},pw=#{pw},email=#{email},interest=#{interest},save_name=#{save_name} where num=#{num}
+    </update>
+    
+    <select id="SEARCH_SAVENAME" resultType="test.com.moim.userinfo.model.UserinfoVO">
+        select save_name from userinfo where user_id=#{user_id}
+    </select>
+    <select id="U_SELECT_ID" resultType="test.com.moim.userinfo.model.UserinfoVO">
+        select * from userinfo where user_id=#{user_id}
+    </select>
+	<select id="ELEMENTS_IN_USERINFO" resultType="test.com.moim.userinfo.model.UserinfoVO">
+		select * from userinfo where user_id=#{user_id}
+	</select>
+
+</mapper>

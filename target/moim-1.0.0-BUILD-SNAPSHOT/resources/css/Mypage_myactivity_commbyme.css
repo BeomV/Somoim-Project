@@ -1,0 +1,135 @@
+.Mypage_myactivity_selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  
+}
+
+.Mypage_myactivity_selection ul {
+
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Mypage_myactivity_selection li {
+
+  color: black;
+  margin: 10px;
+  flex: 1;
+  margin-right: 100px;
+  width: 130px;
+}
+
+.Mypage_myactivity_selection a {
+  text-decoration: none;
+}
+
+.like_List {
+  background-color: white;
+  margin-bottom: 25px;
+  width: 1440px;
+  margin: 0 auto;
+  border: 1px solid white;
+}
+
+
+.like_List ul {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 5px; 
+  border:1px solid white;
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.like_List li {
+  width: 60%; 
+  text-align: left;
+}
+
+.liked_board {
+  background-color: white;
+  padding: 0;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.liked_board ul {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0;
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.liked_board li {
+   margin-top: 5px;
+  }
+
+
+.liked_board .board_profile_info {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border-color: lightgray;
+}
+
+.liked_board .board_profile_info .info_item1 {
+    width: auto; 
+    flex: 0 0 auto; 
+  }
+  
+  .liked_board .board_profile_info .info_item2 {
+    width: 100%;
+  }
+
+  .liked_board .board_profile_info .info_item3 {
+    background-color: white;
+    margin: 10px;
+    width: 14%;
+    height: 10%;
+  }
+  .info_item3 a{
+    
+    margin-right: 2px;
+    border: 1px solid black;
+  }
+  
+  
+  .profile {
+    flex-shrink: 0; 
+    margin-right: 10px; 
+  }
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 5% 5% 0 5%;
+  }
+  
+  .circle img {
+    max-width: 150%;
+    max-height: 100%;
+  }
+  
+  

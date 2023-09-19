@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.moim.point">
+
+	<select id="POINT_SELECT_LIST" resultType="test.com.moim.point.model.PointVO">
+		select * from point
+	</select>
+
+	<select id="POINT_SELECT_ONE" resultType="test.com.moim.userinfo.model.UserinfoVO">
+		select point from userinfo
+		where user_id = #{user_id}
+
+	</select>
+
+	<update id="POINT_PURCHASE">
+		update userinfo set
+			point =point - #{point},
+			item_list=item_list || '/' || #{item_list}
+			where user_id =#{user_id}
+	</update>
+
+
+
+
+</mapper>

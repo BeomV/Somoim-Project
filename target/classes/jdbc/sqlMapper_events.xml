@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.moim.events">
+
+
+    <!--	<insert id="E_INSERT">-->
+    <!--		insert into somoim(num,som_title,category,max_member,create_date)-->
+    <!--		values(seq_somoim.nextval,#{som_title},#{category},#{max_member},sysdate)-->
+    <!--	</insert>-->
+
+
+    <select id="E_SELECT_ALL"
+            resultType="test.com.moim.events.model.EventsVO">
+        select *
+        from events
+    </select>
+
+
+    <select id="E_SELECT_ONE"
+            resultType="test.com.moim.events.model.EventsVO">
+        select *
+        from events
+        where num = #{num}
+    </select>
+
+
+    <insert id="E_INSERT">
+        INSERT INTO events (num, USER_ID, TITLE, CONTENT, SAVE_NAME, START_EVENTS, END_DATE, WINNER, EVENT_TARGET,
+                            PRESENT)
+        VALUES (seq_events.nextval, #{user_id}, #{title}, #{content}, #{save_name},
+                TO_DATE(#{start_events}, 'YYYY-MM-DD'),
+                TO_DATE(#{end_date}, 'YYYY-MM-DD'), #{winner}, #{event_target}, #{present})
+    </insert>
+
+    <update id="E_UPDATE">
+        update events
+        set title=#{title},
+            content=#{content},
+            save_name=#{save_name},
+            start_events=#{start_events},
+            end_date=#{end_date},
+            winner=#{winner},
+            event_target=#{event_target},
+            present=#{present}
+        where num = #{num}
+    </update>
+    <delete id="E_DELETE">
+        delete
+        from events
+        where num = #{num}
+    </delete>
+
+</mapper>

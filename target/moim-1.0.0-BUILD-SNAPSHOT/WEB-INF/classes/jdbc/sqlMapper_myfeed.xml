@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="test.com.moim.myfeed">
+	<update id="MYFEED_UPDATE"
+			parameterType="test.com.moim.myfeed.model.MyfeedVO">
+		update myfeed set introduce=#{introduce} where user_id=#{user_id}
+	</update>
+	<select id="MYFEED_SELECTONE"
+			resultType="test.com.moim.myfeed.model.MyfeedVO">
+		select * from myfeed where user_id=#{user_id}
+	</select>
+	<insert id="MYFEED_INSERT"
+			parameterType="test.com.moim.myfeed.model.MyfeedVO">
+		insert into myfeed (num, user_id) values (seq_myfeed.nextval, #{user_id})
+	</insert>
+	<update id="MYFEED_IMGINSERT"
+			parameterType="test.com.moim.myfeed.model.MyfeedVO">
+		update myfeed set save_name=#{save_name} where user_id=#{user_id}
+	</update>
+</mapper>

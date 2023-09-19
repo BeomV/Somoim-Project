@@ -1,0 +1,441 @@
+@media only screen and (max-width: 1368px) {
+    .join_section{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    height: auto;
+    margin-bottom: 200px;
+    }
+
+    .join_gnb{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    }
+
+    .join_insert_secction{
+        width: 90%;
+    }
+
+    .schedule_insert_section{
+        width: 95%;
+
+    }
+    .schedule_insert_section input{
+        width: 100%;
+    }
+    .schedule_box{
+        width: 100%;
+        
+    
+    }
+
+    .sch_grid{
+        width: 100%;
+    }
+    
+    .schm_grid{
+        display: grid;
+        width: 100%;
+        grid-gap:5px;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .view_content{
+        width: 100%;
+        text-align: left;
+        padding-bottom: 30px;
+        height: auto;
+    
+    }
+
+    .com_grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+
+    .user_info{
+        width: 90%;
+    }
+    
+    .user_info_profile_{
+    display: flex;
+    width: 100%;
+    }
+    
+    .user_info_profile_ .profile{
+    margin-right: 10px;
+    }
+
+    .user_info_profile_tooltip{
+        width: 100%;
+    
+    }
+    
+    .com_func{
+        display: flex;
+        width: 100%;
+        margin-top: 30px;
+        justify-content: space-between;
+    }
+    .com_func input{
+        width: 90%;
+        padding: 5px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    #com_insert{
+        width: 10%;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: #1785F2;
+        margin-left: 12px;
+    
+    }
+    .comments_sec{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .board_section{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .board_category{
+        display: flex;
+        width: 100%;
+
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+.board_grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        list-style-type: none;
+        padding: 0;
+        margin: 30px 0 0 0;
+}
+
+    .board_grid li input{
+        width: 90px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        border: 1px solid #e6e6e6;
+        font-size: 14px;
+        padding: 5px 10px;
+        margin: 2px 16px;
+        text-align: center;
+    }
+
+    /* board_insert 모임 만들기*/
+
+.moim_insert{
+
+    text-align: left;
+    margin: 30px auto;
+    width: 95%;
+    height: auto;  
+}
+
+.moim_insert h1{
+    margin: 15px 0px;
+    font-size: 18px;
+
+}
+
+.moim_insert input{
+    text-align: center;
+    width: 97%;
+    padding: 5px 12px;
+    border: solid 1px #c9c9c9;
+    border-radius: 5px;
+}
+
+#moim_content{
+    height: 500px;
+}
+
+#moim_max, #moim_profile{
+    width: 30%;
+}
+
+#moim_btn{
+    margin: 100px 0px 100px 0px;
+    width: 100%;
+    border: none;
+    background-color: #1785F2;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#moim_location{
+    width: 220px;
+    border: none;
+    background-color: #1785F2;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#moim_location i{
+    color: white;
+    margin-right: 10px;
+}
+    
+    .rec_list{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: 100px;
+    }
+    .rec_list .rec_list_top{
+    
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .rec_list_grid{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+
+    .list_grid{
+        display: grid;
+        margin: 0 auto;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+      }
+      
+      .list_grid li{
+        width: 120%;
+        margin: 0 auto;
+      }
+      
+      .list_box{
+        margin: 12px;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+      }
+      
+      .list_box img{
+        width: 120px;
+        height: 120px;
+        border-radius: 15px;
+        margin-right: 10px;
+      }
+      
+      .list_box span h1{
+        font-size: 20px;
+      }
+      .list_box span{
+        padding: 5px;
+      }
+      
+      .list_box span p{
+        font-size: 14px;
+      }
+      
+      .list_grid{
+        margin-top: 20px;
+      }
+      .board_list{
+        width: 100%;
+        margin: 0 auto 50px auto;
+        text-align: left;
+      }
+      
+      .list_selectAll{
+        width: 100%;
+        margin: 0 auto;
+      }
+      .board_list{
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+      }
+      
+      .list_selectAll{
+        width: 100%;
+        margin: 0 auto;
+      }
+      
+      .board_list_category_detail{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        
+      }
+      
+      
+      .board_list_category_detail button {
+        width: 80px;
+        border: 1px solid #e6e6e6;
+        background-color: white;
+        border-radius: 7px;
+        margin-right: 20px;
+        padding: 3px 0px;
+      }
+      
+      .board_list_category_detail button.list_active {
+        background-color: black;
+        color: white;
+        font-weight: 600;
+      }
+      
+      #board_search{
+        border-radius: 5px;
+        padding: 2px 10px;
+        border: solid 1px #c9c9c9;
+        outline: none;
+        
+      }
+      .cal_detail{
+        width: 87%;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        border: solid 1px #e6e6e6;
+        padding: 30px
+        
+      
+        
+      }
+
+      .detail_member ul{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+      }
+
+      .join_member ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        margin: 10px 0px;
+      }
+      
+      .join_member li{
+        margin: 0px 10px;
+      }
+
+      .join_commnets_insert_section{
+        width: 100%;
+        margin: 50px auto 0px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .comments_user_profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .commnets_user_profile_img{
+        width: 50px;
+        height: 50px;
+        background-color: #ccc;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .join_commnets_insert_section input{
+        width: 60%;
+        padding: 8px 12px;
+        
+      }
+      
+      .join_commnets_insert_section button{
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: none;
+        background-color: #1785F2;
+        color: white;
+      }
+
+      .join_imgbox{
+        width: 100%;
+        margin: 0 auto;
+      
+      }
+
+    .join_imgbox .img_grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        width: 90%;
+        margin: 40px auto;
+    
+        
+    }
+    
+    .img_grid li{
+      
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #d4d4d4;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+  .join_imgbox{
+    width: 100%;
+    margin: 0 auto;
+
+  
+  }
+
+.join_imgbox .img_grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 10px;
+    width: 90%
+    
+
+    
+}
+
+.img_grid li{
+  
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4d4d4;
+}
+
+}

@@ -1,0 +1,5 @@
+
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(•™¯Æ8 Ê‘î’1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•™¯Æ8ØÊ‘î’1
+e
+java:S3252"CUse static access with "javax.mail.Message$RecipientType" for "TO".(ñ‰Í£þÿÿÿÿ8ÜÊ‘î’1

@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    color: #3c3c3c;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 0px;
+}
+
+
+h3 {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+
+
+.mypage_all_sec{
+    width: 1340px;
+    margin: 0 auto;
+    background-color: white;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+.mypage_all_sec::after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+  
+  .profile {
+    width: 450px;
+    background-color: white;
+    height: 720px;
+    float: left;
+  }
+  
+  .mypage_insert {
+    display: inline-block;
+    width: 890px;
+    background-color: white;
+    height: 720px;
+    text-align: left;
+    margin-left: 0px;
+  }
+
+.mypage_insert_sec{
+    width: 830px;
+    background-color: white;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+
+.mypage_insert_sec input{
+    width: 80%;
+    margin: 10px 0px 20px 10px;
+    padding: 10px;
+    border: #ccc solid 1px;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+
+  .mypage_footer_insert{
+    width: 800px;
+    margin: 0 auto;
+    height: 400px;
+    text-align: center;
+  }
+
+  .footer_head{
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+.footer_head h2{
+    display: inline; 
+    width: 500px;
+}
+.footer_head h5{
+    display: inline; 
+    font-size: 0.7em;
+    color: gray;
+    margin-left: 20px;
+}
+
+.mypage_insert_sec01 {
+  display: flex;
+  width: 990px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: right;
+}
+
+  .mypage_footer_insert input{
+    width: 80%;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    border: #ccc solid 1px;
+    border-radius: 5px;
+    background-color: gray;
+    outline: none;
+    
+}
+
+
+.footer_insert{
+  text-align: left;
+}
+
+.footer_insert input{ 
+    width: 80%;
+    background-color: white;
+    text-align: left;
+}
+.footer_blank{ 
+    width: 80%;
+    background-color: white;
+    text-align: left;
+    
+}
+
+.footer_blank input{ 
+    width: 50%;
+    background-color: white;
+    text-align: left;
+    
+}
+
+.mypage_footer_insert button{
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #1785F2;
+    outline: none;
+    
+  }
+  .footer_blank h2{
+    width: 500px;
+}
+
+
+
+
+.profile {
+    position: relative;
+    
+  }
+  
+  .circle {
+    display: flex;
+    width: 200px;
+    margin: 50% 20% 50% 30%;
+    border-radius: 50%;
+    background-color: #ccc;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .circle img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+
+  .mypage_sec {
+    width: 1440px;
+    margin: 0 auto;
+    
+    
+  }
+
+  .mypage_top_sec {
+    display: flex;
+    padding: 30px;
+    border: solid 1px #ccc;
+    margin-top: 10px;
+    justify-content: space-around;
+
+  }
+
+  .mypage_left_profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
+  }
+
+  .mypage_myprofile{
+    display: flex;
+    width: 200px;
+    border-radius: 100px;
+    background-color: skyblue;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+
+.mypage_moim_profile i{
+  font-size: 120px;
+  color: white;
+  font-weight: 100;
+}
+
+  .mypage_right_info {
+    
+    text-align: center;
+    
+  }
+  .mypage_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    
+  }
+
+  .mypage_grid li{
+    width: 350px;
+    margin: 20px;
+    text-align: left;
+  }
+
+  .mypage_grid li a{
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .mypage_center_sec{
+    width: 1438px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-top: none;
+
+  }
+
+  .mypage_center_sec h2{
+    padding: 24px;
+  }
+
+  .mypage_center_sec .mypage_grid02{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .mypage_center_sec .mypage_grid02 li{
+    margin: 0px 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    
+    
+  }
+
+  .mypage_center_sec .mypage_grid02 li .mypage_moim_profile{
+    display: flex;
+    width: 200px;
+    border-radius: 100px;
+    background-color: rgb(179, 179, 179);
+    height: 200px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mypage_bottom_sec{
+    width: 1438px;
+    margin: 0 auto 10px auto;
+    border: #ccc solid 1px;
+    border-top: none;
+    padding-bottom: 50px;
+    height: auto;
+  }
+
+  .mypage_bottom_sec h2{
+    padding: 24px;
+  }
+
+  .myapge_grid03{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mypage_grid03 li{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+
+  }
+
+.note_content{
+  width: 60%;
+  padding: 12px 0px 0px 0px;
+  
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

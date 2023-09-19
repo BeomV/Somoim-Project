@@ -1,0 +1,8 @@
+
+n	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡Ü8…† ë—1
+y	java:S116"XRename this field "birthday_year" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºâæÿÿÿÿÿ8‡† ë—1
+z	java:S116"YRename this field "birthday_month" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³©ŞÆÿÿÿÿÿ8‰† ë—1
+s	java:S116"WRename this field "birthday_day" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ÔÎ¥8‰† ë—1
+o	java:S116"TRename this field "som_title" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÈÜH8‰† ë—1
+p	java:S116"TRename this field "save_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òĞøÃ8‰† ë—1
+o	java:S116"TRename this field "item_list" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ†p8‰† ë—1

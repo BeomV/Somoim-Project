@@ -1,0 +1,139 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #3c3c3c;
+}
+
+input{
+    margin: 20px 0px 20px 10px;
+    padding: 10px;
+    border: #ccc solid 1px;
+    border-radius: 5px;
+    outline: none;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5rem;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+h3 {
+    display: block;
+    font-size: 1.3rem;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+}
+
+
+.find_sec{
+    background-color: white;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    padding: 50px;
+}
+
+
+.find_sec span {
+    text-align: left;
+}
+
+
+
+.find_sec button {
+    width: 56%;
+    margin-left: 10px;
+    padding: 4px;
+    border: none;
+    background-color: #1785F2;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.find_title{
+    background-color: white; 
+    text-align:  left;
+    height: 4%;
+}
+
+
+.insert_sec{
+    background-color: white; 
+    text-align: center;
+    width: 100%;
+    
+}
+
+.total{
+    width: 80%;
+    background-color: white;
+    margin-left: 8%;
+    text-align: left;
+    
+}
+
+.email{
+    text-align: left;
+    background-color:white;
+    width: 100%;
+}
+.email  h3{
+    display: inline;
+    width: 70%;
+}
+.email h5{
+    display: inline; font-size: 0.7em;
+}
+
+.inser_email{
+    background-color: white; 
+    width:100%;
+}
+.inser_email input{
+    width: 40%;
+}
+
+.inser_email button{
+    width: 18%; background-color: gray;
+}
+
+
+.insert_certi input{
+    width: 40%;
+    margin-bottom: 0px;
+    text-align: left;
+
+}
+
+.injarea{
+    background-color: white; 
+    width: 50%;
+    text-align: right;
+
+}
+
+#inj{
+    width: 200px; 
+    background-color: transparent; 
+    height: 10px; 
+    color: gray; padding-bottom: 20px;
+    font-size:  0.6rem; ;
+}
+#submitpass{
+    margin:20px 0px 0px 200px;
+     width: 150px;
+}

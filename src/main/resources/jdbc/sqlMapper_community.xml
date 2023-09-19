@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.moim.community">
+    <select id="MYPAGE_COMMUNITYBYME" resultType="test.com.moim.community.model.CommunityVO">
+       select * from community_board where user_id=#{user_id} order by num desc
+    </select>
+
+    <select id="MYPAGE_GOOD" resultType="test.com.moim.community.model.CommunityVO">
+       SELECT * FROM community_board WHERE num IN (SELECT num FROM community_good_count_list WHERE user_id = #{user_id})
+    </select>
+
+    <select id="CB_SELECT_ALL" resultType="test.com.moim.community.model.CommunityVO">
+        select *
+        from community_board order by num desc
+    </select>
+
+    <select id="CB_SELECT_ONE" resultType="test.com.moim.community.model.CommunityVO">
+        select *
+        from community_board
+        where num = #{num}
+    </select>
+
+
+    <select id="CB_SEARCH_LIST_TITLE" resultType="test.com.moim.community.model.CommunityVO">
+        select *
+        from community_board
+        where title like #{searchWord}
+    </select>
+
+    <select id="CB_SEARCH_LIST_CONTENT" resultType="test.com.moim.community.model.CommunityVO">
+        select *
+        from community_board
+        where content like #{searchWord}
+    </select>
+
+    <select id="CB_SEARCH_LIST_USER_ID" resultType="test.com.moim.community.model.CommunityVO">
+        select *
+        from community_board
+        where user_id like #{searchWord}
+    </select>
+
+    <select id="CB_SEARCH_LIST_save_img" resultType="test.com.moim.community.model.CommunityVO">
+        select *
+        from community_board
+        where save_img like #{searchWord}
+    </select>
+
+    <insert id="CB_INSERT" parameterType="test.com.moim.community.model.CommunityVO">
+
+        insert into community_board(num, title, user_id, content, save_img)
+        values (seq_community_board.nextval, #{title}, #{user_id}, #{content}, #{save_img})
+
+    </insert>
+
+    <update id="CB_UPDATE" parameterType="test.com.moim.community.model.CommunityVO">
+        update community_board
+        set title=#{title},
+            content=#{content},
+            write_date=sysdate,
+            save_img=#{save_img}
+        where num = #{num}
+    </update>
+
+    <select id="CB_SELECT_SAVE_NAME" resultType="test.com.moim.community.model.CommunityVO">
+        select * from userinfo
+    </select>
+
+    <!--	GOOD COUNT LIST 를 불러온다.-->
+    <select id="CB_SELECT_ALL_GOOD_LIST" resultType="test.com.moim.community.model.CommunityVO">
+        select * from community_good_count_list where user_id=#{user_id} and num=#{num}
+    </select>
+
+
+
+    <!--	좋아요 버튼을 누를 때 작용한다.-->
+    <update id="CB_GOOD_COUNT_UP">
+        update community_board
+        set good_count = good_count + 1 where num=#{num, jdbcType=VARCHAR}
+    </update>
+
+    <!--	좋아요를 누른 인원을 LIST에 추가한다.-->
+    <insert id="CB_ADDING_GOOD_COUNT_LIST">
+        insert into community_good_count_list(num, user_id, community_list_num) values (#{num}, #{user_id}, seq_community_good_count.nextval)
+    </insert>
+
+    <!--	좋아요가 눌려있는 버튼을 누를 때 작용한다.-->
+    <update id="CB_GOOD_COUNT_DOWN">
+        update community_board
+        set good_count = good_count - 1 where num=#{num}
+    </update>
+
+    <!--	좋아요 취소 누른 인원을 LIST에서 삭제한다..-->
+    <delete id="CB_DEL_GOOD_COUNT_LIST" >
+        delete from community_good_count_list where
+            num=#{num} and user_id=#{user_id}
+    </delete>
+
+
+    <delete id="CB_DELETE">
+        delete
+        from community_board
+        where num = #{num}
+    </delete>
+
+    <select id="COM_TOTAL_SEARCHING"
+            resultType="test.com.moim.community.model.CommunityVO">
+        select * from community_board where title like '%' || #{searchKey} || '%'
+                                OR content like '%' || #{searchKey} || '%'
+    </select>
+
+
+
+</mapper>

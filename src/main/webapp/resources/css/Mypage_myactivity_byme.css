@@ -1,0 +1,156 @@
+
+
+.Mypage_myactivity_selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.Mypage_myactivity_selection ul {
+
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Mypage_myactivity_selection li {
+
+  color: black;
+  margin: 10px;
+  flex: 1;
+  margin-right: 100px;
+  width: 130px;
+}
+
+.Mypage_myactivity_selection a {
+  text-decoration: none;
+}
+
+.like_List {
+  margin-top: 30px;
+  background-color: white;
+  margin-bottom: 25px;
+  width: 1440px;
+  margin: 0 auto;
+  border: 1px solid white;
+}
+
+
+.like_List ul {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 30px; 
+  border:1px solid white;
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.like_List li {
+  width: 60%; 
+  text-align: left;
+}
+
+.liked_board {
+  background-color: white;
+  padding: 0;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.liked_board ul {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0;
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+.liked_board .board_profile_info {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border-color: lightgray;
+}
+
+.liked_board .board_profile_info .info_item1 {
+  width: 10%;
+}
+
+.profile {
+  position: relative;
+  
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 5% 5% 0 5%;
+}
+
+.circle img {
+  max-width: 150%;
+  max-height: 100%;
+}
+
+
+
+.liked_board .board_profile_info .info_item2 {
+  width: 100%;
+}
+.liked_board .board_profile_info .info_item3 {
+  background-color: white;
+  margin: 10px;
+  width: 14%;
+  height: 10%;
+}
+.info_item3 a{
+  
+  margin-right: 2px;
+  border: 1px solid black;
+}
+
+
+.liked_board .board_profile_info .info_item2 .vertical_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.photo_list {
+  display: flex;
+  gap: 10px;
+}
+
+.photo_list a {
+  display: flex;
+  align-items: center;
+}
+
+.photo_list img {
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 0%;
+  margin-bottom: 10%;
+}

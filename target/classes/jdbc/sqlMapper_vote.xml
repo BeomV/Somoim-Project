@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.moim.board">
+	<insert id="Vote_Insert">
+		insert into somoim_question_vote
+		(num,som_member_num,question)
+		values (
+				#{num},
+				(SELECT num FROM somoim_member WHERE user_id = #{user_id,jdbcType=VARCHAR} and somoim_num = #{somoim_num,jdbcType=INTEGER}),
+		        #{question}
+			   )
+
+
+	</insert>
+
+	<select id="MAX_NUM" resultType="test.com.moim.board.model.Somoim_Question_VoteVO">
+		SELECT NUM FROM Somoim_Question_Vote ORDER BY NUM DESC FETCH FIRST 1 ROWS ONLY
+	</select>
+
+	<insert id="CHOICE_INSERT" >
+		insert into somoim_choice_vote
+		(num,som_qvote_num,choice,count)
+		values (
+		        seq_somoim_choice_vote.nextval,
+		        #{som_qvote_num},
+		        #{choice},
+		        0
+
+			   )
+	</insert>
+
+	<select id="VOTE_SELECT_ALL" resultType="test.com.moim.board.model.Somoim_Question_VoteVO">
+		SELECT SQV.*, SC.*
+		FROM Somoim_board SB
+				 INNER JOIN Somoim_question_vote SQV ON SB.vote_num = SQV.num
+				 INNER JOIN Somoim_Choice_vote SC ON SQV.num = SC.som_qvote_num
+		where SB.num = #{num2}
+
+	</select>
+
+	<update id="VOTE_UPDATE">
+		update somoim_choice_vote set
+		count = count + 1,
+		som_vote_user_id = som_vote_user_id || '/' || #{som_vote_user_id}
+		where choice = #{choice} and som_qvote_num = #{som_qvote_num}
+	</update>
+
+	<update id="VOTE_CANCLE">
+		UPDATE somoim_choice_vote SET
+			 count = count - 1,
+			 som_vote_user_id = REGEXP_REPLACE(som_vote_user_id, '/' || #{som_vote_user_id}, '')
+		WHERE
+			choice = #{choice} AND som_qvote_num = #{som_qvote_num}
+
+	</update>
+
+
+
+
+
+
+</mapper>

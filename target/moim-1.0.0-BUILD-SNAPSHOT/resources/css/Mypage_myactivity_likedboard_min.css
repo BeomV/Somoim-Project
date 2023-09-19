@@ -1,0 +1,59 @@
+@media screen and (max-width: 768px) {
+    .Mypage_myactivity_selection li {
+      margin-right: 10px;
+      max-width: 90px;
+      font-size: 12px;
+    }
+  
+    .like_List {
+      width: 100%;
+      height: auto;
+      font-size: 12px;
+      overflow: hidden;
+    }
+  
+    .like_List ul {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .like_List li {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .liked_board {
+      width: 100%;
+    }
+  
+    .liked_board ul {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .liked_board .board_profile_info {
+      flex-wrap: wrap;
+      gap: 0px;
+    }
+    
+  
+    .liked_board .board_profile_info .info_item1{
+      width: 15%;
+    }
+    .liked_board .board_profile_info .info_item2 {
+      width: 30%;
+      margin-right: 00px;
+  
+    }
+  
+    .liked_board .board_profile_info .info_item3 {
+      width: 100%;
+      margin-top: 20px;
+      text-align: right;
+    }
+  
+    .footer {
+      flex-wrap: wrap;
+    }
+  }
+  

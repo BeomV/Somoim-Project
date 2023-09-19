@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.moim.report">
+
+	<insert id="REPORTS_INSERT"
+
+		parameterType="test.com.moim.report.model.ReportsVO">
+		insert into report (num,
+							board_num, member_num,user_id, criminal, report_date, reason)
+
+		values (SEQ_reports.nextval, #{num},0 ,#{user_id}, #{criminal},sysdate, #{reason})
+	</insert>
+
+
+</mapper>

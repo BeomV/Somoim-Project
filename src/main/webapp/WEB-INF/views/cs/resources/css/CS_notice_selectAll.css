@@ -1,0 +1,100 @@
+.notice_table_board h5{
+    font-size: 0.7rem;
+    color: rgb(189, 188, 188);
+    margin-top: 130px;
+    
+}
+
+.notice_table_board {
+    width: 1440px;
+    height: auto;
+    background-color: white;
+    margin: 0 auto;
+  }
+  
+  .notice_List {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+  }
+  
+  
+.noticeOne{
+    background-color: white;
+    margin-left: 40px;
+}
+
+  .about_one {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .about_one ul {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+
+  }
+  
+  .about_one li {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 20%;
+  }
+  
+  .about_one li:first-child {
+    width: 70%;
+    height: 70px;
+  }
+  
+  .about_one li a {
+    flex: 1;
+    display: block;
+    background-color: transparent;
+    color: black;
+  }
+  
+  .about_one li:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .about_one li h5 {
+    margin: 0;
+  }
+  
+  .about_one li img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .notice_List li.notice_img_enter {
+    height: 90px; /* �썝�븯�뒗 �넂�씠 媛믪쑝濡� 蹂�寃쏀븯�꽭�슂 */
+  }
+  
+  .notice_List li.notice_img_enter img {
+    display: block;
+    height: 30px;
+    width: auto;
+    margin-left: 70%;
+    padding: 0;
+  }
+
+  .more_but{
+    width: 130px;
+    margin: 20px 0px 30px 40px;
+    width: 20%;
+    padding: 10px;
+    border: #ccc solid 1px;
+    border-radius: 40px;
+    outline: none;
+    background-color: white;
+    color: gray;
+    
+  }
+  .more_but_position{
+    background-color: white;
+  text-align: center;  }

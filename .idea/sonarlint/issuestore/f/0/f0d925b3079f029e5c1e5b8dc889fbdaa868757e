@@ -1,0 +1,5 @@
+
+r	java:S114"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ØÖ•÷ûÿÿÿÿ8…±ºŸ”1
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§œ¼ªøÿÿÿÿ8Š±ºŸ”1
+j
+java:S1128"HRemove this unused import 'test.com.moim.comments.model.som_commentsVO'.(ÛìóŠþÿÿÿÿ8¦•ƒ¡”1

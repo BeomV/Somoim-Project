@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	color: #3c3c3c;
+	font-family: 'Noto Sans KR', sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+
+h2 {
+	display: block;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	margin-top: 0px;
+}
+
+h3 {
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.total_area {
+	margin-left: 10%;
+	border: white solid 1px;
+	text-align: center;
+	width: 70%;
+	height: auto;
+	margin-top: 5%;
+	margin-left: 15%;
+}
+
+.total_position {
+	background-color: white;
+}
+
+.upper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+}
+
+.profile_area {
+	background-color: white;
+	width: 40%;
+	height: auto;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10%;
+}
+
+.profile_img_sec {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-bottom: 20%;
+}
+
+.profile_img_sec img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.profile_fix_but {
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.insert_area {
+	text-align: left;
+	background-color: white;
+	width: 60%;
+}
+
+.insert_area_id {
+	background-color: white;
+	margin-bottom: 3%;
+}
+
+.insert_area_id input {
+	margin-left: 2%;
+	width: 50%;
+}
+
+.mem_info {
+	margin-bottom: 10px;
+}
+
+#juso {
+	width: 18%;
+}
+
+.insert_area_Tel input {
+	margin-bottom: 1%;
+}
+
+.insert_area_id_but {
+	display: flex;
+	justify-content: center;
+	width: 55%;
+}
+
+.insert_area_id_but button {
+	border: none;
+	background-color: transparent;
+	color: gray;
+}
+
+.email_area {
+	background-color: white;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 5%;
+}
+
+.mypage_insert_email_footer {
+	background-color: white;
+	width: 75%;
+}
+
+.email_footer_head h2 {
+	background-color: white;
+	width: 90%;
+	margin-bottom: 2%;
+}
+
+.input_with_button input {
+	width: 40%;
+	margin-bottom: 1%;
+}
+
+.input_with_button input {
+	margin-bottom: 0px;
+}
+
+.email_footer_body p {
+	margin: 5px 3px;
+}
+
+.birth_part .email_footer_head {
+	margin-top: 1%;
+}

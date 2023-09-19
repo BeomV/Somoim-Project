@@ -1,0 +1,280 @@
+@media only screen and (max-width: 767px) {
+    * {
+        font-family: 'Noto Sans KR', sans-serif;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        color: #3c3c3c;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .gnb {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+    }
+    .logo img {
+        width: 40px;
+    }
+    nav {
+
+    }
+    nav > ul > li {
+        float: left;
+        font-size: 12px;
+        width: 50px;
+    }
+    .main_search {
+        display: none;
+    }
+    .login > a {
+        font-size: 8px;
+    }
+    .main_container {
+        width: 100%;
+    }
+    .img_banner,
+    .main_pictogram,
+    .main_section04,
+    .moim_list01 {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .img_banner {
+        display: flex;
+        justify-content: center;
+        overflow: hidden; 
+        height: 300px;
+
+    }
+    .img_banner img{
+        width: 100%;
+    }
+    .main_pictogram {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        text-align: center;
+    }
+    .main_pictogram ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .main_pictogram ul li {
+        width: 50px;
+        height: 40px;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        align-items: center;
+        background-color: #ececec;
+      }
+    
+      .main_pictogram ul li i {
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+    .main_pictogram ul li i:hover {
+        color: #81a9ff;
+    }
+
+    .moim_list01 strong , .moim_list02 strong{
+        font-size: 24px;
+        
+    
+    }
+
+    .moim_list01{
+        width: auto;
+        margin: 0 auto;
+        height: 800px;
+        background-color: #f8f8f8;
+        text-align: center;
+    }
+
+    .moim_list01 ul{
+        width: auto;
+        text-align: center;
+        
+    }
+
+    .moim_list01 ul li{
+        margin: 10px;
+        width: 90%;
+        height: auto;
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .moim_list01 ul div:first-child{
+    
+        float: left;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+
+    
+    }
+    .moim_list01 ul div:first-child img{
+        margin-top: 7px;
+        width: 90%;
+        border-radius: 15px;
+    }
+
+    .moim_list01 ul div:last-child{
+        text-align: left;
+        float: left;
+        width: 180px;
+        height: auto;
+        margin: 15px;
+        overflow: hidden;
+    
+    }
+    
+    .moim_list01 .hashtag {
+        width: 50px;
+        font-size: 8px;
+        border-radius: 5px;
+        background-color: #d1d1d1;
+        text-align: center;
+    }
+    
+    
+    .main_selectList h1{
+        font-size: 16px;
+        padding-top: 10px;
+    
+    }
+    
+    .moim_list01 .sub_tit{
+        font-size: 10px;
+        color: #666;
+    }
+
+    .moim_list02{
+        width: auto;
+        margin: 0 auto;
+        height: 800px;
+        background-color: #f4f7fd;
+        text-align: center;
+    }
+
+    .moim_list02 ul{
+        width: auto;
+        text-align: center;
+        
+    }
+
+    .moim_list02 ul li{
+        margin: 10px;
+        width: 90%;
+        height: auto;
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .moim_list02 ul div:first-child{
+    
+        float: left;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+
+    
+    }
+    .moim_list02 ul div:first-child img{
+        margin-top: 7px;
+        width: 90%;
+        border-radius: 15px;
+    }
+
+    .moim_list02 ul div:last-child{
+        text-align: left;
+        float: left;
+        width: 180px;
+        height: auto;
+        margin: 15px;
+        overflow: hidden;
+    
+    }
+    
+    .moim_list02 .hashtag {
+        width: 50px;
+        font-size: 8px;
+        border-radius: 5px;
+        background-color: #d1d1d1;
+        text-align: center;
+    }
+    
+    
+    .main_selectList h1{
+        font-size: 16px;
+        padding-top: 10px;
+    
+    }
+    
+    .moim_list02 .sub_tit{
+        font-size: 10px;
+        color: #666;
+    }
+
+    #more_info{
+        
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        width: 100px;
+        padding: 5px 0px;
+    }
+
+    .footer{
+        padding: 20px 0px 30px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer li{
+        font-weight: 600;
+        color: #888888;
+    }
+    
+    .footer strong{
+        font-size: 8px;
+    }
+    
+    .footer > div >ul >li{
+        padding: 7px 0px;
+        font-size: 8px;
+    }
+    
+    
+
+    .footer_company ul li{
+        
+        font-size: 8px;
+        
+    }
+
+
+
+
+
+}

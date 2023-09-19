@@ -1,0 +1,10 @@
+
+i	java:S101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(«×¤Î8ÅµÚé—1
+n	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡Ü8ÈµÚé—1
+v	java:S116"URename this field "write_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†…¤ëøÿÿÿÿ8ÈµÚé—1
+v	java:S116"URename this field "good_count" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›´ôùÿÿÿÿ8ÈµÚé—1
+u	java:S116"TRename this field "board_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÚÙÌùÿÿÿÿ8ÈµÚé—1
+q	java:S116"URename this field "parent_com" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÜˆü8ÈµÚé—1
+p	java:S116"TRename this field "save_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òĞøÃ8ÈµÚé—1
+n
+java:S1128"LRemove this unused import 'org.springframework.web.multipart.MultipartFile'.(ôŸœÿÿÿÿÿ8…ùÜé—1

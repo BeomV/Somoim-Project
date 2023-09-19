@@ -1,0 +1,6 @@
+
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(®îÒÒ
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ÕÍßü
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÍßü
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íáÅÒüÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑôÒ

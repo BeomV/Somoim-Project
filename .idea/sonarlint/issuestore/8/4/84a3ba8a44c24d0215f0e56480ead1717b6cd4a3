@@ -1,0 +1,28 @@
+
+_
+java:S1192#"IDefine a constant instead of duplicating this literal "user_id" 12 times.(ä¹Æ
+v
+java:S1192N"[Define a constant instead of duplicating this literal "redirect:eventSelectAll.do" 3 times.(÷Øå²ùÿÿÿÿ
+a
+java:S1192&"KDefine a constant instead of duplicating this literal "userId..{}" 6 times.(™‘Šë
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š´íë
+c
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ñõ†øÿÿÿÿ
+c
+java:S4488!"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(‹Òúƒÿÿÿÿÿ
+^
+java:S4488."HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ŸéğÏ
+h	java:S1008"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Ô½İøÿÿÿÿ
+c
+java:S44887"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ğ†ß¤ûÿÿÿÿ
+h	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡û¢Íûÿÿÿÿ
+`
+java:S4488C"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(‹ƒŒ
+R
+java:S1854]"7Remove this useless assignment to local variable "vo2".(Æ­Çÿøÿÿÿÿ
+^
+java:S4488U"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Úşıñ
+^
+java:S4488g"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(óÔ¶Ù
+d
+java:S4488ƒ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ş¼§–ùÿÿÿÿ

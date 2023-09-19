@@ -1,0 +1,92 @@
+.event {
+    margin-top: 100px;
+  }
+
+  .event .event_top {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ececec;
+    
+}
+
+.event .event_content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; /* 내용을 가운데 정렬하는 속성 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; /* 이미지와 내용 사이의 간격 조정을 위한 상단 마진 값 */
+    margin-bottom: 50px; /* 이미지와 내용 사이의 간격 조정을 위한 하단 마진 값 */
+  }
+  
+  .event .event_content img {
+    width: auto; /* 이미지의 가로 너비 설정 */
+    height: auto; /* 이미지의 세로 높이는 가로 너비에 맞추도록 설정 */
+    margin-bottom: 50px; /* 이미지와 내용 사이의 간격 조정을 위한 하단 마진 값 */
+  }
+  
+  .event .event_content p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left; /* 왼쪽 정렬 속성 추가 */
+  }
+
+  .event .event_content p span {
+    font-weight: bold; /* 진하게 표시할 부분에 span 태그로 감싸고, 폰트 두께를 bold로 설정 */
+  }
+
+  
+
+  .event h1{
+    font-size: 24px;
+
+  }
+
+.event_list{
+    margin-top: 100px;
+  }
+
+  .event_list .event_list_top {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ececec;
+    
+}
+
+  .event_list h1{
+    font-size: 24px;
+
+  }
+
+  .event_list_grid {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ececec;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    list-style: none;
+    text-align: center; /* 가운데 정렬을 위해 text-align 속성을 center로 수정 */
+  }
+
+  .event_list_grid .event_img {
+  margin: 10px auto; /* 가로 여백을 자동으로 조정하여 가운데 정렬 */
+  width: 50%;
+  height: 150px;
+  display: flex;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+}
+
+

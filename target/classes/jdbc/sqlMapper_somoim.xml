@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="test.com.moim.somoim">
+	<select id="SOMOIM_SELECT_ALL"
+		resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim order by num desc
+	</select>
+
+	<select id="SOMOIM_SELECT_ONE"
+		resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim where num = #{num}
+	</select>
+
+	<select id="SOMOIMBYME_SELECT_ALL"
+		resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim where somoim_master = #{user_id}
+	</select>
+
+	<select id="MYSOMOIM_SELECT_ALL"
+		resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim a join somoim_member b on a.num=b.somoim_num where user_id=#{user_id}
+	</select>
+
+	<select id="SELECT_MYPAGE"
+		resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim a join somoim_member b on
+		a.som_title=b.som_title where user_id=#{user_id}
+	</select>
+
+	<select id="SELECT_SOMOIM"
+		resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim_member a join somoim b on
+		a.somoim_num=b.num where somoim_num=#{somoim_num}
+	</select>
+
+	<select id="SOMOIM_SEARCH_LIST_TITLE"
+		resultType="test.com.moim.somoim.model.SomoimVO"
+		parameterType="HashMap">
+		select * from somoim where som_title like #{searchWord}
+		and category=#{category} order by num desc
+	</select>
+
+	<select id="SOMOIM_SEARCH_LIST_TITLE2"
+		resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim where som_title like #{searchWord} order by num desc
+	</select>
+
+	<select id="SOMOIM_SEARCH_LIST_AREA"
+		resultType="test.com.moim.somoim.model.SomoimVO"
+		parameterType="HashMap">
+		select * from somoim where area like #{searchWord} and
+		category=#{category} order by num desc
+	</select>
+	<select id="SOMOIM_SEARCH_LIST_AREA2"
+		resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim where area like #{searchWord} order by num desc
+	</select>
+
+	<select id="COUNT_SOMOIM" resultType="int">
+		select count(*) from somoim
+	</select>
+
+	<select id="PAGING_SOMOIM"
+		resultType="test.com.moim.somoim.model.SomoimVO">
+		SELECT *
+		FROM (
+		SELECT rownum rn, a.*
+		FROM (
+		SELECT *
+		FROM somoim
+		ORDER BY num DESC
+		) a
+		) WHERE rn BETWEEN #{start} AND #{end}
+	</select>
+
+	<insert id="SOMOIM_INSERT"
+		parameterType="test.com.moim.somoim.model.SomoimVO">
+		insert into somoim
+		(num,som_title,category,max_member,create_date,area, som_content,
+		somoim_img, somoim_master)
+		values(seq_somoim.nextval,#{som_title},#{category},#{max_member},sysdate,#{area},
+		#{som_content}, #{somoim_img}, #{somoim_master})
+	</insert>
+
+	<update id="SOMOIM_UPDATE"
+		parameterType="test.com.moim.somoim.model.SomoimVO">
+		update somoim set category=#{category},
+		area=#{area}, som_content=#{som_content}, max_member=#{max_member}, somoim_img=#{somoim_img} where num = #{num}
+	</update>
+
+	<delete id="SOMOIM_DELETE">
+		delete from somoim where num = #{num}
+	</delete>
+
+
+
+
+
+
+	<select id="SOMOIM_TOTAL_SEARCHING"
+			resultType="test.com.moim.somoim.model.SomoimVO"
+			parameterType="HashMap">
+		select * from somoim where som_title like '%' || #{searchKey} || '%'
+								OR category like '%' || #{searchKey} || '%'
+	</select>
+
+
+	<select id="SOMOIM_NUM_USER_ID"
+			resultType="test.com.moim.somoim.model.SomoimVO"
+			parameterType="HashMap">
+		select * from somoim_member where somoim_num=#{num}
+	</select>
+
+
+	<select id="SOMOIMTITLE_CHECK"
+			resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim where som_title = #{som_title}
+	</select>
+</mapper>

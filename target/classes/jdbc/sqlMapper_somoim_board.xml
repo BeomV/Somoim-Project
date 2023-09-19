@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.com.moim.board">
+	<select id="MYPAGE_BOARDBYME"
+		resultType="test.com.moim.board.model.Somoim_BoardVO">
+		select * from somoim_board a join somoim_member b on a.som_member_num=b.num 
+		join somoim c on a.somoim_num=c.num where user_id=#{user_id}
+	</select>
+	
+	<select id="MYPAGE_LIKEDBOARD"
+		resultType="test.com.moim.board.model.Somoim_BoardVO">
+		select * from somoim_board a join good_count_list b on a.num=b.num where user_id=#{user_id}
+	</select>
+	
+	<select id="JOIN_SOMOIM_SELECT_ALL" resultType="test.com.moim.board.model.Somoim_BoardVO">
+		SELECT * FROM (
+			SELECT rownum rnum, A.* FROM (
+				SELECT * FROM somoim_board b
+				INNER JOIN somoim_member m
+				on b.som_member_num = m.num
+				where b.somoim_num = #{somoim_num}
+				ORDER BY b.num desc
+				) A WHERE rownum &lt;= #{endRow}
+					  ) WHERE rnum >= #{startRow}
+	</select>
+
+	<select id="JOIN_SOMOIM_SELECT_SAVE_NAME" resultType="test.com.moim.board.model.Somoim_BoardVO">
+		select * from userinfo
+	</select>
+
+	<select id="JOIN_SOMOIM_SELECT_ONE"
+			resultType="test.com.moim.board.model.Somoim_BoardVO">
+
+		select m.user_id, b.NUM,b.TITLE,b.CONTENT,m.SAVE_NAME,b.WRITE_DATE,b.VIEW_COUNT,b.GOOD_COUNT,b.VOTE_NUM,b.SOM_MEMBER_NUM,b.SOMOIM_NUM ,b.save_image from somoim_board b
+		INNER JOIN somoim_member m
+	   on b.som_member_num = m.num
+		where b.num=#{num}
+	</select>
+	<update id="JOIN_SOMOIM_UPDATE">
+		update somoim_board set
+		title=#{title},content=#{content}
+		where num=#{num}
+	</update>
+	<delete id="JOIN_SOMOIM_DELETE">
+		delete from somoim_board where num=#{num}
+	</delete>
+	<select id="Sch_SELECT_ONE"
+		resultType="test.com.moim.board.model.Somoim_ScheduleVO">
+		select * from somoim_schedule where num =#{num}
+	</select>
+	<update id="Sch_UPDATE">
+		update somoim_schedule set
+		schedule_title =#{schedule_title},
+		schedule_date=#{schedule_date},
+		schedule_time = #{schedule_time},
+		place=#{place},
+		money=#{money},
+		max_participant=#{max_participant}
+		where num = #{num}
+	</update>
+	<delete id="Sch_DELETE">
+		delete from somoim_schedule where num=#{num}
+	</delete>
+	<insert id="JOIN_INSERT">
+		insert into
+			somoim_board(num, title, content, som_member_num, somoim_num, write_date, save_image,vote_num)
+		values(
+				  seq_somoim_board.nextval,
+				  #{title,jdbcType=VARCHAR},
+				  #{content,jdbcType=VARCHAR},
+				  (SELECT num FROM somoim_member WHERE user_id = #{user_id,jdbcType=VARCHAR} and somoim_num = #{somoim_num,jdbcType=INTEGER}),
+				  #{somoim_num,jdbcType=INTEGER},
+				  sysdate,
+				  #{save_image,jdbcType=VARCHAR},
+		    	#{vote_num}
+			  )
+	</insert>
+
+	<update id="SCH_PART_UPDATE">
+		UPDATE somoim_schedule
+		SET
+		participant = participant || '/' || #{user_id},
+		participant_count = participant_count + 1
+		WHERE
+		num = #{num}
+		AND INSTR(participant, '/' || #{user_id}) = 0
+	</update>
+	<update id="SCH_CANCEL_UPDATE">
+		update somoim_schedule
+		SET
+		participant = #{participant},
+		participant_count = participant_count -1
+		where
+		num = #{num}
+	</update>
+<!--	GOOD COUNT LIST 를 불러온다.-->
+	<select id="SELECT_ALL_GOOD_LIST" resultType="test.com.moim.board.model.Somoim_BoardVO">
+		select * from good_count_list where user_id=#{user_id} and num=#{num}
+	</select>
+
+
+
+<!--	좋아요 버튼을 누를 때 작용한다.-->
+	<update id="SOM_GOOD-COUNT_UP">
+		update somoim_board
+		set good_count = good_count + 1 where num=#{num}
+
+	</update>
+
+<!--	좋아요를 누른 인원을 LIST에 추가한다.-->
+	<insert id="ADDING_GOOD_COUNT_LIST">
+		insert into good_count_list(num, user_id, list_num) values (#{num}, #{user_id}, seq_good_count.nextval)
+	</insert>
+
+	<!--	좋아요가 눌려있는 버튼을 누를 때 작용한다.-->
+	<update id="SOM_GOOD-COUNT_DOWN">
+		update somoim_board
+		set good_count = good_count - 1 where num=#{num}
+
+	</update>
+
+	<!--	좋아요 취소 누른 인원을 LIST에서 삭제한다..-->
+	<delete id="DEL_GOOD_COUNT_LIST" >
+		delete from good_count_list where
+		num=#{num} and user_id=#{user_id}
+	</delete>
+
+<!--게시글을 보았을 때, 바로 작용한다. 즉, 게시글이 호출되면 바로 작용한다.-->
+	<update id="SOM_VIEW-COUNT_UP" parameterType="test.com.moim.board.model.Somoim_BoardVO">
+		update somoim_board
+		set view_count = view_count + 1 where num=#{num}
+
+	</update>
+
+	<select id="JSON_SELECT_ALL" resultType="test.com.moim.board.model.Somoim_BoardVO">
+	select * from somoim_board where somoim_num = #{somoim_num}
+	</select>
+
+	<select id="Join_Count" resultType="int">
+		select count(*) from somoim_board b
+			INNER JOIN somoim_member m
+			on b.som_member_num = m.num
+		where b.somoim_num = #{somoim_num}
+	</select>
+
+	<select id="Sch_Count" resultType="int">
+		select count(*) from somoim_schedule
+		where somoim_num = #{somoim_num}
+	</select>
+
+	<select id="SELECT_VOTE_NUM" resultType="test.com.moim.board.model.Somoim_Question_VoteVO">
+		select * from somoim_question_vote
+		where num = #{num}
+	</select>
+
+	<select id="SELECT_CHOICE_ITEM" resultType="test.com.moim.board.model.Somoim_Choice_Vote">
+		select * from somoim_choice_vote
+		where som_qvote_num = #{som_qvote_num}
+	</select>
+
+	<select id="LOGIN_ID_PROFILE" resultType="test.com.moim.board.model.Somoim_BoardVO">
+		select * from userinfo
+		where user_id = #{user_id}
+	</select>
+
+
+
+</mapper>

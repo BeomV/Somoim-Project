@@ -1,0 +1,83 @@
+
+
+.bug_total{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    height: auto;
+    margin-bottom: 200px;
+
+    background-color: white;
+  }
+  
+  
+  
+  .bug_insert_sec{
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      width: 900px;
+      text-align: center;
+      padding: 50px;
+      
+    }
+    
+    .bug_insert_sec span input{
+        width: 90%;
+        margin: 10px 0px 20px 10px;
+        padding: 10px;
+        border: #ccc solid 1px;
+        border-radius: 15px;
+        outline: none;
+        
+        
+    }
+    
+  
+.area_bug {
+    background-color: white;
+    margin-bottom: 5px;
+    border-bottom: 1px solid lightgray;        
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.bug_insert_sec h2 {
+    margin-top: 1.4%;
+}
+ .area_bug_titent{
+    background-color: white;
+    text-align: left;
+ }
+  .bug_insert_sec h2 h3{
+    text-align: left;
+    width: 100px;
+    background-color: white;
+  
+  }
+  
+  #bug_insert_content{
+    width: 900px;
+    height: 600px;
+    text-align: center;
+    
+  }
+  
+
+  .bug_but{
+    margin: 00px 0px 00px 00px;
+    width: 5%;
+    padding: 5px;
+    border: #ccc solid 1px;
+    border-radius: 40px;
+    outline: none;
+    background-color: #1785F2;
+    color: white;
+    
+  }
+  .bug_but_position{
+    background-color: white;
+  text-align: center;  }

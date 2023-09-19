@@ -1,0 +1,65 @@
+@media only screen and (max-width: 1368px) {
+    .register_section{
+        display: flex;
+        width: 98%;
+        margin: 0 auto;
+        height: 850px;
+        text-align: center;
+        justify-content: center; /* 수평 정렐 */
+        align-items: center; /* 수직 정렬 */
+
+    }
+
+    form{
+        width: 100%;
+
+    }
+    .birth_gender{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .register_section input{
+        width: 98%;
+        margin: 10px 0px;
+        border: solid 1px #d6d6d6;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .register_section #user_email,
+    .register_section #email_token{
+        width: 75%;
+    }
+
+    .register_section button{
+        width: 20%;
+
+        border: solid 1px #d6d6d6;
+        border-radius: 5px;
+        background-color: white;
+        margin-left: 10px;
+        outline: none;
+    }
+
+    .birth_gender select{
+        width: 100px;
+        margin: 5px 0px;
+        padding: 3px 10px;
+        border: solid 1px #d6d6d6;
+        border-radius: 5px;
+
+    }
+
+    #register{
+        width: 99%;
+        margin: 0;
+        padding: 0;
+        padding: 5px;
+        color: white;
+        background-color: #1785F2;
+        text-align: center;
+        margin-top: 50px;
+    }
+}

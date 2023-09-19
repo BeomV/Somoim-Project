@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.moim">
+
+
+
+<!--	COMMUNITY_COMMENTS-->
+<!--	<update id="CB_COM_GOOD_COUNT_UP" parameterType="test.com.project.board.model.BoardVO">-->
+<!--		update community_comments set good_count=good_count+1-->
+<!--		where num = #{num}-->
+<!--	</update>-->
+
+
+<!--	<update id="CB_COM_GOOD_COUNT_DOWN" parameterType="test.com.project.board.model.BoardVO">-->
+<!--		update community_comments set good_count=good_count-1-->
+<!--		where num = #{num}-->
+<!--	</update>-->
+
+<!--	MYFEED-->
+<!--	<update id="FEED_GOOD_COUNT_UP" parameterType="test.com.moim.myfeed.model.myfeedVO">-->
+<!--		update myfeed set good_count=good_count+1-->
+<!--		where num = #{num}-->
+<!--	</update>-->
+
+<!--	<update id="FEED_GOOD_COUNT_DOWN" parameterType="test.com.moim.myfeed.model.myfeedVO">-->
+<!--		update myfeed set good_count=vcount-1-->
+<!--		where num = #{num}-->
+<!--	</update>-->
+<!--	SOMOIM_BOARD-->
+	<update id="SB_GOOD_COUNT_UP" parameterType="test.com.moim.board.model.Somoim_BoardVO">
+		update board set good_count=good_count+1
+		where num = #{num}
+	</update>
+
+
+	<update id="SB_GOOD_COUNT_DOWN" parameterType="test.com.moim.board.model.Somoim_BoardVO">
+		update board set good_count=good_count-1
+		where num = #{num}
+	</update>
+<!--	SOMOIM_BOARD_COMMENTS-->
+	<update id="SB_COM_GOOD_COUNT_UP" parameterType="test.com.moim.comments.model.som_commentsVO">
+		update somoim_board_comments set good_count=good_count+1
+		where num = #{num}
+	</update>
+
+	<update id="SB_COM_GOOD_COUNT_DOWN" parameterType="test.com.moim.comments.model.som_commentsVO">
+		update somoim_board_comments set good_count=good_count-1
+		where num = #{num}
+	</update>
+
+
+
+
+
+</mapper>

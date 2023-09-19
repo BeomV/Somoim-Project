@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.moim.comments">
+	<select id="SOM_C_SELECT_ALL"
+		resultType="test.com.moim.comments.model.som_commentsVO">
+		SELECT c.*, m.*
+		FROM somoim_Board_comments c
+		JOIN
+		somoim_member m ON c.som_member_num = m.num
+		WHERE c.som_board_num =
+		#{som_board_num}
+		AND c.som_comment_depth = 0
+		AND c.somoim_num =
+		#{somoim_num}
+	</select>
+
+	<select id="MYPAGE_COMMBYME"
+		resultType="test.com.moim.comments.model.som_commentsVO">
+		select * from somoim_board_comments a join somoim_member b on a.som_member_num=b.num 
+		join somoim c on a.somoim_num=c.num join somoim_board d on a.som_board_num=d.num where user_id=#{user_id}
+	</select>
+
+	<insert id="SOM_C_INSERT"
+
+		parameterType="test.com.moim.comments.model.som_commentsVO">
+		insert into somoim_board_comments (num,
+		som_member_num,content, good_count, som_board_num, som_comment_depth,
+		somoim_num)
+
+		values (SEQ_SOMOIM_BOARD_COMMENTS.nextval, (SELECT num FROM
+		somoim_member WHERE user_id = #{user_id} and somoim_num=#{somoim_num})
+		, #{content,jdbcType=VARCHAR},0,#{som_board_num, jdbcType=VARCHAR}, 0,
+		#{somoim_num})
+	</insert>
+
+	<update id="SOM_C_UPDATE">
+		UPDATE somoim_board_comments
+		SET content = #{content,
+		jdbcType=VARCHAR}
+		WHERE num = #{num, jdbcType=VARCHAR}
+	</update>
+
+	<delete id="SOM_C_DELETE">
+		DELETE FROM SOMOIM_BOARD_COMMENTS
+		WHERE (num = #{num,
+		jdbcType=VARCHAR} AND som_board_num = #{som_board_num,
+		jdbcType=VARCHAR})
+		OR PARENT_COM = #{num, jdbcType=VARCHAR}
+	</delete>
+</mapper>

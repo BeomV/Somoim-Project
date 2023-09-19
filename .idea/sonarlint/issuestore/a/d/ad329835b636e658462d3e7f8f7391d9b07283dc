@@ -1,0 +1,80 @@
+
+l
+java:S1192å"IDefine a constant instead of duplicating this literal "password" 3 times.(Õäç²úÿÿÿÿ8»½î—1
+•
+java:S1192¥"wDefine a constant instead of duplicating this literal "ì¼ì¹˜í•˜ëŠ” íšŒì› ì •ë³´ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤." 3 times.(²ğ†ğ8»½î—1
+e
+java:S1192Ø"HDefine a constant instead of duplicating this literal "user_id" 5 times.(½Úª8»½î—1
+‘
+java:S1192ª"sDefine a constant instead of duplicating this literal "ì•„ì´ë”” ê²€ìƒ‰ ì¤‘ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤." 3 times.(êÃéÀ8¼½î—1
+m	java:S117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´õ¡Î8½½î—1
+m	java:S117\"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìü¦”8½½î—1
+r	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘²¿ğùÿÿÿÿ8½½î—1
+m	java:S117t"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ€î­8½½î—1
+r	java:S117u"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘áöÑıÿÿÿÿ8½½î—1
+r	java:S117y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¿ şÿÿÿÿ8½½î—1
+v
+java:S1450œ"XRemove the "apiResult" field and declare it as a local variable in the relevant methods.(×†à8Û½î—1
+o	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÄíÉúÿÿÿÿ8Ş½î—1
+j
+java:S44888"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"( î÷—úÿÿÿÿ8Ş½î—1
+j	java:S100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ£À8ß½î—1
+e
+java:S4488B"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(“ù¬8à½î—1
+o	java:S100N"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å”üÖÿÿÿÿÿ8à½î—1
+e
+java:S4488M"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(²˜ˆã8á½î—1
+o	java:S100U"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åâ‘Ûúÿÿÿÿ8á½î—1
+l
+java:S4488T"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ùé¢äúÿÿÿÿ8â½î—1
+H
+java:S1075p"&Remove this hard-coded path-delimiter.(À¿­øÿÿÿÿ8ô½î—1
+^	java:S125"<This block of commented-out lines of code should be removed.(ÓœÉöşÿÿÿÿ8€¾î—1
+_
+java:S1854Ú"<Remove this useless assignment to local variable "birthday".(Ó¾ßğúÿÿÿÿ8†¾î—1
+^
+java:S1854Ï";Remove this useless assignment to local variable "jsonObj".(ïÌÖ¤ùÿÿÿÿ8†¾î—1
+Y	java:S125¶"<This block of commented-out lines of code should be removed.(ª÷˜œ8‡¾î—1
+O
+java:S1481Ï",Remove this unused "jsonObj" local variable.(ïÌÖ¤ùÿÿÿÿ8Œ¾î—1
+P
+java:S1481Ú"-Remove this unused "birthday" local variable.(Ó¾ßğúÿÿÿÿ8¾î—1
+h
+java:S4488ô"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(·µı†8¾î—1
+f
+java:S4488…"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(„ª±8“¾î—1
+p	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìúŸ¸úÿÿÿÿ8“¾î—1
+k
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(…´¡Ûùÿÿÿÿ8”¾î—1
+k	java:S100˜"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è‹ª­8”¾î—1
+f
+java:S4488—"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(÷•İä8¦¾î—1
+k
+java:S4488²"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(…¹ïÌüÿÿÿÿ8¿î—1
+k
+java:S4488º"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ñ»æ¡şÿÿÿÿ8¿î—1
+k
+java:S4488Ø"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Éşñûÿÿÿÿ8“¿î—1
+k	java:S100õ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óŒ¶ê8£¿î—1
+k
+java:S4488ô"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ç¬©øÿÿÿÿ8£¿î—1
+j	java:S100€"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‚”8¤¿î—1
+m
+java:S4488ÿ"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(®æ„Àşÿÿÿÿ8¤¿î—1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â‰@8¥¿î—1
+h
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(‡Éâ³8¦¿î—1
+@
+java:S1128!"Remove this duplicated import.(¡¸Îùÿÿÿÿ8±¿î—1
+@
+java:S1128""Remove this duplicated import.(øŠ—Öùÿÿÿÿ8±¿î—1
+@
+java:S1128#"Remove this duplicated import.(ê†ıÿÿÿÿ8±¿î—1
+;
+java:S1128$"Remove this duplicated import.(ö»¿ë8±¿î—1
+@
+java:S1128%"Remove this duplicated import.(Ê™Ğÿûÿÿÿÿ8²¿î—1
+;
+java:S1128'"Remove this duplicated import.(ûúÄ®8²¿î—1
+@
+java:S1128)"Remove this duplicated import.(…­¾ìûÿÿÿÿ8²¿î—1

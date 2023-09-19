@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="propertyPlaceholderConfigurer"
+		  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:jdbc/oracle.properties</value>
+		</property>
+	</bean>
+	<!--1. pom.xml commons-dbcp.jar -->
+	<bean id="dataSource"
+		  class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName"
+				  value="${oracle.DRIVER_NAME}" />
+		<property name="url" value="${oracle.URL}" />
+		<property name="username" value="${oracle.USER}" />
+		<property name="password" value="${oracle.PASSWORD}" />
+	</bean>
+	<!--2. pom.xml mybatis.jar -->
+	<bean id="sqlSessionFactory"
+		  class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:jdbc/sqlMapper_somoim.xml</value>
+				<value>classpath:jdbc/sqlMapper_member.xml</value>
+				<value>classpath:jdbc/sqlMapper_community.xml</value>
+				<value>classpath:jdbc/sqlMapper_community_comments.xml</value>
+				<value>classpath:jdbc/sqlMapper_community_re_comments.xml</value>
+				<value>classpath:jdbc/sqlMapper_board.xml</value>
+				<value>classpath:jdbc/sqlMapper_somoim_board.xml</value>
+				<value>classpath:jdbc/sqlMapper_CS.xml</value>
+				<value>classpath:jdbc/sqlMapper_comments.xml</value>
+				<value>classpath:jdbc/sqlMapper_d_comments.xml</value>
+				<value>classpath:jdbc/sqlMapper_userinfo.xml</value>
+				<value>classpath:jdbc/sqlMapper_events.xml</value>
+				<value>classpath:jdbc/sqlMapper_counting.xml</value>
+				<value>classpath:jdbc/sqlMapper_vote.xml</value>
+				<value>classpath:jdbc/sqlMapper_message.xml</value>
+				<value>classpath:jdbc/sqlMapper_point.xml</value>
+				<value>classpath:jdbc/sqlMapper_myfeed.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory" />
+	</bean>
+	<bean id="multipartResolver"
+		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="-1" />
+		<!-- -1 이면 크기제한 없음 -->
+	</bean>
+	<!-- 이메일 보내기 -->
+	<!-- gmail 로그인 후 로그인 &보안 ====보안 수준이 낮은 앱 허용: 사용으로 변경 -->
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="wendy3302@gmail.com" />
+		<property name="password" value="yccavwvdkvlzcrlu" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+</beans>

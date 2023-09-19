@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.board">
+
+
+	<insert id="B_INSERT">
+		insert into somoim(num,som_title,category,max_member,create_date)
+		values(seq_somoim.nextval,#{som_title},#{category},#{max_member},sysdate)
+	</insert>
+
+	<select id="Find_UserInfo"
+			resultType="test.com.moim.userinfo.model.UserinfoVO">
+		select * from userinfo
+
+	</select>
+
+	<select id="Sch_SELECT_ALL"
+			resultType="test.com.moim.board.model.Somoim_ScheduleVO">
+			SELECT * FROM (
+						  SELECT rownum rnum, A.* FROM (
+														   select * from somoim_schedule
+														   where somoim_num = #{somoim_num}
+														   Order by num desc
+													   ) A WHERE rownum &lt;= #{endRow}
+			) WHERE rnum >= #{startRow}
+	</select>
+
+	<select id="SOM_SCHEDULE_SELECTONE"
+			resultType="test.com.moim.board.model.Somoim_ScheduleVO">
+		select * from somoim_schedule where somoim_num=#{somoim_num}
+	</select>
+
+
+	<insert id="Sch_INSERT">
+        INSERT INTO somoim_schedule(num, schedule_date, schedule_time, schedule_title, place, money, max_participant,
+                                    som_member_num, somoim_num, participant, participant_count,user_id)
+        VALUES (seq_somoim_schedule.nextval,
+                #{schedule_date},
+                #{schedule_time},
+                #{schedule_title},
+                #{place},
+                #{money},
+                #{max_participant},
+                (SELECT num FROM somoim_member WHERE user_id = #{user_id} and somoim_num = #{somoim_num}),
+                #{somoim_num},
+                #{participant},
+                1,
+                #{user_id})
+    </insert>
+
+	<select id="Sch_SELECT_PART"
+			resultType="test.com.moim.board.model.Somoim_ScheduleVO">
+
+		select save_name from userinfo
+		where user_id = #{user_id}
+
+	</select>
+
+	<select id="SCHEDULE_PAYMENT"
+			resultType="test.com.moim.board.model.Somoim_ScheduleVO">
+
+		SELECT m.num,s.som_member_num
+		FROM somoim_schedule s
+		INNER JOIN somoim_member m ON s.Som_member_num = m.num
+		WHERE m.num = #{som_member_num} AND s.num = #{num}
+
+	</select>
+
+	<select id="PAYMENT_USER_CHECK"
+			resultType="test.com.moim.board.model.Somoim_MemberVO">
+
+			select num from somoim_member
+			where user_id = #{user_id} and somoim_num = #{somoim_num}
+
+	</select>
+
+
+
+
+</mapper>
