@@ -127,9 +127,6 @@ API & Library : RESTful API  (JSON), Jquery, KaKaoPay, CRUD, LomBok
 
 ## JavaScript
 ```
-$(document).ready(function() {
-
-
     var globalCurrentNum;
 
     function setCurrentNum(num) {
@@ -158,7 +155,6 @@ $(document).ready(function() {
             });
         });
     }
-}
 
 var prevClickedButton = null;
 
@@ -218,8 +214,6 @@ var prevClickedButton = null;
 
         }
     }
-
-    $(document).ready(function() {
         var userId = "${user_id}";
 
         // 모든 투표 항목을 순회
@@ -234,7 +228,6 @@ var prevClickedButton = null;
                 $(this).css('background-color', '#ccc'); // vote_items 요소의 배경색을 #ccc로 변경
             }
         });
-    });
 ```
 
 
