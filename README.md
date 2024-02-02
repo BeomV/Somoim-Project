@@ -68,7 +68,7 @@ API & Library : RESTful API  (JSON), Jquery, KaKaoPay, CRUD, LomBok
 비동기 방식으로 서버에 응답을 요청 후 클라이언트에 반환되게 코드를 수정하여 개선하였습니다.
 
 ## @Controller
-```
+```java
 @RequestMapping(value = "/choice_insertOK.do", method = RequestMethod.POST)
     public String choice_insertOK(Somoim_Choice_Vote vo) {
         log.info("choice_insertOK.do().....{}", vo);
@@ -126,7 +126,7 @@ API & Library : RESTful API  (JSON), Jquery, KaKaoPay, CRUD, LomBok
 ```
 
 ## JavaScript
-```
+```js
     var globalCurrentNum;
 
     function setCurrentNum(num) {
